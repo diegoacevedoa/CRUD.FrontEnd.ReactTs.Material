@@ -1,0 +1,128 @@
+.mb-field {
+  min-height: 100px;
+
+  .mb-form-label {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+
+    .mb-text-danger {
+      color: #dc3545;
+    }
+  }
+
+  .mb-input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+
+    .mb-field-control {
+      border-radius: 12px;
+      border: 1px solid #686868;
+      min-height: 20px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 400;
+      appearance: auto;
+      width: 100%;
+
+      &::placeholder {
+        color: #1e1e1e;
+        opacity: 0.6;
+      }
+
+      &:focus,
+      &:hover {
+        border: 1px solid #204d99;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        outline: none;
+      }
+
+      &.is-invalid {
+        border-color: #dc3545;
+        outline: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.6rem) center !important;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+      }
+
+      &:disabled {
+        background: #d9d9d9;
+        border: 1px solid #686868;
+        box-shadow: none;
+      }
+
+      option {
+        background-color: #ffffff;
+      }
+    }
+
+    .mb-invalid-feedback {
+      display: block;
+      width: 100%;
+      margin-top: 0.25rem;
+      font-size: 0.875em;
+      color: #dc3545;
+    }
+  }
+
+  .mb-input-group-password {
+    border-right: 0;
+
+    &:focus,
+    &:hover {
+      border-right: 0;
+      border-color: #686868;
+      box-shadow: none;
+    }
+
+    &.is-invalid {
+      border-color: #dc3545;
+    }
+
+    &:disabled {
+      border-right: 0;
+    }
+  }
+
+  .mb-input-group-text {
+    background-color: white;
+    border-radius: 12px;
+    border-color: #686868;
+
+    &:focus,
+    &:hover {
+      border-color: #686868;
+      box-shadow: none;
+    }
+
+    //No funciona con el span por eso se crea otro estilo aparte: mb-input-group-text-disabled
+    &:disabled {
+      background: #d9d9d9;
+      border-color: #686868;
+      box-shadow: none;
+    }
+  }
+
+  .mb-input-group-text-disabled {
+    background: #d9d9d9;
+    border-radius: 12px;
+    border-color: #686868;
+    box-shadow: none;
+  }
+}
+
+.form-check {
+  padding-left: 0.8em;
+}
+
+.form-check-inline {
+  margin-right: 0.5rem;
+}
+
+.form-check-input:checked {
+  background-color: #204d99;
+  border-color: #204d99;
+}
